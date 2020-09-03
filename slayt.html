@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slayt Denemesi</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <style type="text/css">
+    img{
+        height: 300px;
+        width: 300px;
+        margin-left: 490px;
+        transition: all 1s ease-in-out;
+    }
+
+    img:hover{
+        margin-top: 150px;
+        transform: scale(2);
+    }
+
+    
+    #onox{
+        padding: 10px;
+    }
+
+    #ireli{
+        position: absolute;
+        left: 890px;
+        bottom: 470px;
+        background-color: green;
+        outline: green;
+    }
+    
+    #arxaox{
+        padding: 10px;
+    }
+
+    #geri{
+        position: absolute;
+        bottom: 470px;
+        right: 970px;
+        background-color: red;
+        outline: red;
+    }
+
+    #alt{
+        position: absolute;
+        left: 538px;
+        top: 330px;
+    }
+    #alt button{
+        margin: 14px;
+        padding: 10px;
+        border-radius: 9px;
+        outline: none;
+        
+    }
+
+    /*@keyframes animasyon{
+        0%{background-color: rgb(255, 0, 0);}
+        30%{background-color: green;}
+        50%{background-color: rgb(255, 0, 0);}
+        100%{background-color: green;}
+    }
+
+    @-webkit-keyframes animasyon{
+        0%{background-color: rgb(25, 0, 255);}
+        30%{background-color: rgb(244, 96, 133);}
+        50%{background-color: rgb(255, 0, 0);}
+        100%{background-color: rgb(113, 233, 0);}
+    }*/
+    
+
+    
+    </style>
+
+
+</head>
+<body>
+<div><img src="storm.jpg" alt="maaaleseff!!!" id="img"></div>  
+<button id="ireli" onclick="ireli()"><i class="fas fa-arrow-right" id="onox"></i></button>
+<button id="geri" onclick="geri()"><i class="fas fa-arrow-left" id="arxaox"></i></button>
+<div id="alt">
+<button onclick="birinci()" id="bir"></button>
+<button onclick="ikinci()" id="iki"></button>
+<button onclick="ucuncu()" id="uc"></button>
+<button onclick="dorduncu()" id="dord"></button>
+</div>
+
+    <script>
+        var srcler = ["storm.jpg","gece.jpg","aysekli.jpg","arkaplan.jpg"]
+        var number = 0
+        var degistir = document.getElementById("img")
+        function ireli(){
+            number++
+            if(number>srcler.length - 1){
+                number = 0
+            }
+            degistir.src = srcler[number]
+        }
+
+        function geri(){
+            number--
+            if(number<0){
+                number = srcler.length - 1
+            }
+            degistir.src = srcler[number]
+        }
+
+        function birinci(){
+            degistir.src = srcler[0]
+        }
+
+        function ikinci(){
+            degistir.src = srcler[1]
+        }
+
+        function ucuncu(){
+            degistir.src = srcler[2]
+        }
+
+        function dorduncu(){
+            degistir.src = srcler[3]
+        }
+        
+        function rand(){
+            number++
+            if(number>srcler.length - 1){
+                number = 0
+            }
+            degistir.src = srcler[number]
+            console.log(number)
+        }
+        
+
+        setInterval(rand,3000)
+
+
+    </script>
+</body>
+</html>
