@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404</title>
+    <style type="text/css">
+        body{
+            margin: 0px;
+            padding: 0px;
+            background-color: black;
+        }
+
+        .genel{
+            height: 400px;
+            width: 600px;
+            background-color: black;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: center;
+            margin: 130px 375px;
+        }
+
+        .reqem{
+            color: white;
+            font-size: 170px;
+            margin: 100px 90px;
+	    cursor:pointer;
+        }
+        .dord{
+            color:red;
+            animation: animasyon 1s infinite ease-in-out alternate;
+        }
+        .sifir{
+            animation: animasyon2 1s infinite ease-in-out alternate;
+        }
+
+        @keyframes animasyon{
+            from{
+                margin: 20px 90px;
+                color: red;
+            }
+
+            to{
+                margin:200px 90px;
+                color: white;
+            }
+        }
+
+        @keyframes animasyon2{
+            from{
+                margin: 200px 90px;
+                color: white;
+            }
+
+            to{
+                margin:20px 90px;
+                color: red;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="genel">
+        <div class="dord reqem">4</div>
+        <div class="sifir reqem">0</div>
+        <div class="dord reqem">4</div>
+    </div>
+</body>
+</html>
