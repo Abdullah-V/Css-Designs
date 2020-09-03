@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zer atma</title>
+    <style type="text/css">
+    #sekil1{
+        background-color: green;
+        display: inline-block;
+        height: 100px;
+        width: 100px;
+    }
+    #sekil2{
+        background-image: url("zer1.png");
+        background-attachment: fixed;
+        display: inline-block;
+        height: 100px;
+        width: 100px;
+        margin: 0px 10px 0px 5px;
+    }
+    button{
+        display: block;
+        margin-left: 60px;
+        padding: 15px;
+        width: 100px;
+    }
+    
+    
+    </style>
+</head>
+<body>
+    <img src="zer1.png" alt=":(" id="sekil1">
+    <img src="zer2.png" alt=":(" id="sekil2">
+    <button onclick="at()">zer at</button>
+    <script>
+       function at(){
+        var asd = Math.random() * 6
+        var bir = Math.ceil(asd)
+        var dsa = Math.random() * 6
+        var iki = Math.ceil(dsa)
+        var sekil1 = document.getElementById("sekil1")
+        var sekil2 = document.getElementById("sekil2")
+        switch(bir){
+            case 1:
+            sekil1.src = "zer1.png"
+            break
+            case 2:
+            sekil1.src = "zer2.png"
+            break
+            case 3:
+            sekil1.src = "zer3.png"
+            break
+            case 4:
+            sekil1.src = "zer4.png"
+            break
+            case 5:
+            sekil1.src = "zer5.png"
+            break
+            case 6:
+            sekil1.src = "zer6.png"
+            break
+        }
+
+        switch(iki){
+            case 1:
+            sekil2.src = "zer1.png"
+            break
+            case 2:
+            sekil2.src = "zer2.png"
+            break
+            case 3:
+            sekil2.src = "zer3.png"
+            break
+            case 4:
+            sekil2.src = "zer4.png"
+            break
+            case 5:
+            sekil2.src = "zer5.png"
+            break
+            case 6:
+            sekil2.src = "zer6.png"
+            break
+        }
+        
+       } 
+
+    </script>
+</body>
+</html>
