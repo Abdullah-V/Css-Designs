@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsiv site tasarimi</title>
+    <style type="text/css">
+    body{
+        margin: 0px;
+        padding: 0px;
+        font-family: monospace;
+        /*background-color:rgb(9, 10, 14);*/
+        background-image: url("arkaplan.jpg");
+        width: 100%;
+    }
+    #h1{
+        text-align: center;
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+    }
+
+    .yazi{
+        height: 207px;
+        width: 200px;
+        background-color: rgba(0, 88, 251, .6);
+        padding: 13px 25px;
+        margin: 10px;
+        transition: all .7s ease-in-out;
+        cursor: pointer;
+    }
+    .yazi:hover{
+        box-shadow: 5px 5px 20px black,
+                    -5px -5px 20px black;
+        transform: scale(1.07);
+
+    }
+    #genel{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        transition: all 1s ease-in-out;
+    }
+
+    h2{
+        text-align: center;
+    }
+
+    #flex{
+        color: black;
+        background-color: royalblue;
+    }
+    #box{
+        border: 1px solid royalblue;
+        padding: 0px 10px; 
+        color: royalblue;
+    }
+    #genel:hover .yazi{
+        transform: scale(0.97);
+        filter: blur(3px);
+    }
+    #genel:hover .yazi:hover{
+        box-shadow: 5px 5px 20px black,
+                    -5px -5px 20px black;
+        transform: scale(1.07);
+        filter: none;
+    }
+    
+
+    
+
+
+    #css{
+        animation: animasyon 1s infinite alternate;
+    }
+    @keyframes animasyon{
+        from{
+            color: rgb(255, 157, 0);
+        }
+        to{
+            color: rgb(47, 0, 255);
+        }
+    }
+    @media only screen and (max-width: 850px) {
+        .yazi{
+            height: 180px;
+            width: 100%;
+        }
+        #genel{
+            flex-wrap: wrap;
+        }
+        
+      }
+     
+    
+    
+    </style>
+</head>
+<body>
+    <h1 id="h1"><span id="css">CSS</span> <span id="flex">FLEX</span><span id="box">BOX</span></h1>
+    <div id="genel">
+        <div class="yazi yazi1 clsyz">
+            <h2>Lorem ipsum</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque totam, mollitia eligendi qui accusamus numquam deleniti aperiam nobis quis consequatur odit magnam aspernatur doloribus ad doloremque ab maiores esse optio!</p>
+        </div>
+        <div class="yazi yazi2 clsyz">
+            <h2>Lorem ipsum</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque totam, mollitia eligendi qui accusamus numquam deleniti aperiam nobis quis consequatur odit magnam aspernatur doloribus ad doloremque ab maiores esse optio!</p>
+        </div>
+        <div class="yazi yazi3 clsyz">
+            <h2>Lorem ipsum</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque totam, mollitia eligendi qui accusamus numquam deleniti aperiam nobis quis consequatur odit magnam aspernatur doloribus ad doloremque ab maiores esse optio!</p>
+        </div>
+
+    </div>
+</body>
+</html>
